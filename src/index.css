@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgb(170 59 255 / 10%);
+  --accent-border: rgb(170 59 255 / 50%);
+  --social-bg: rgb(244 243 236 / 50%);
+  --shadow:
+    rgb(0 0 0 / 10%) 0 10px 15px -3px,
+    rgb(0 0 0 / 5%) 0 4px 6px -2px;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  /* Root-level design defaults */
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Use rem-based sizing throughout the app */
+  font-size: 18px;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+/* Respect the user's operating-system color preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgb(192 132 252 / 15%);
+    --accent-border: rgb(192 132 252 / 50%);
+    --social-bg: rgb(47 48 58 / 50%);
+    --shadow:
+      rgb(0 0 0 / 40%) 0 10px 15px -3px,
+      rgb(0 0 0 / 25%) 0 4px 6px -2px;
+  }
+}
+
+/* Predictable sizing for every element */
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Page-level defaults */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0.18px;
+}
+
+/* React's mount element */
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Useful media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Keep form controls consistent with the rest of the app */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
