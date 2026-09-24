@@ -14,7 +14,8 @@ The browser is a good enough rendering engine - card flips and simple UI motion 
 Potential, non final milestones are denoted with `*`.
 This is a work in progress.
 
-- [ ] New game. 3x4 grid. No time limit
+- [X] New game. 3x4 grid. No time limit
+- [ ] Animations for flipping. Reset after flipping two incorrect pairs
 - [ ] Dynamic grid (4x4, 5x6 etc)
 - [ ] Time limit
 - [ ] Scoring system
@@ -27,21 +28,27 @@ This is a work in progress.
   - Collapsing grid
   - Versus `*`
 
+
+
 ## Scripts
 
 I use `pnpm` as my package manager of choice.
 
 First install node modules with:
+
 ```bash
 pnpm install
 ```
 
 Then to start the dev server:
+
 ```bash
 pnpm run dev
 ```
 
 To build, run:
+
 ```bash
 pnpm run build
 ```
+
