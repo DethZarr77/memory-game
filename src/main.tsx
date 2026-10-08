@@ -3,17 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "./App";
-import HomePage from "./pages/HomePage";
-import NewGamePage from "./pages/NewGamePage";
+import { routes } from "./config/router";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      { index: true, element: <HomePage /> },
-      { path: "new-game", element: <NewGamePage /> },
-    ],
+    children: routes.map(({ path, Component }) =>
+      path === "/"
+        ? { index: true, element: <Component /> }
+        : { path: path.slice(1), element: <Component /> },
+    ),
   },
 ]);
 

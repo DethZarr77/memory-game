@@ -13,8 +13,10 @@ const TileGrid = ({
   tiles,
   onClick,
 }: TileGridProps) => {
+  console.log("Tile amount", tiles);
+
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="h-100 grid grid-cols-4 grid-rows-3 gap-4">
       {tiles.map((item) => (
         <Tile
           key={`tile-key-${item}`}
